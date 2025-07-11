@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+        /* Index - Updated Layout */
+        .home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 60px;
+            min-height: 80vh;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .home-content {
+            flex: 1;
+            padding-right: 60px;
+        }
+
+        .home-content h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .home-content h1 span {
+            color: #8795D9;
+            background: transparent;
+        }
+
+        .home-content h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            color: #333;
+            background: transparent;
+        }
+
+        .home-content .typing-text {
+            font-size: 2.5rem;
+            font-weight: 600;
+            min-width: 280px;
+            margin-bottom: 2rem;
+            color: #333;
+            background: transparent;
+        }
+
+        .typing-text span {
+            position: relative;
+            color: #8795D9;
+            background: transparent;
+        }
+
+        .typing-text span::before {
+            content: "A Good Story Teller";
+            color: #8795D9;
+            animation: words 20s infinite;
+        }
+
+        .typing-text span::after {
+            content: "";
+            background-color: burlywood;
+            position: absolute;
+            width: calc(5% + 8px);
+            height: 8%;
+            border-left: 3px solid burlywood;
+            right: -8px; 
+            animation: cursor 0.6s infinite;
+        }
+
+        .home-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            background: transparent;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            background: transparent;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            background-color: transparent;
+            border: 0.2rem solid #8795D9;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            transition: 0.3s ease;
+            color: #8795D9;
+        }
+
+        .social-icons a:hover {
+            color: bisque;
+            transform: scale(1.1) translateY(-3px);
+            background-color: #8795D9;
+            box-shadow: 0 0 20px rgba(135, 149, 217, 0.4);
+        }
+
+        .hire-btn {
+            background: transparent;
+        }
+
+        .hire-btn button {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background-color: transparent;
+            border: 2px solid #8795D9;
+            color: #8795D9;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hire-btn button:hover {
+            background-color: #8795D9;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            flex: 0 0 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #8795D9, #87ADDE);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent);
+        }
+
+        .projects-section {
+            padding: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: transparent;
+        }
+
+        .projects-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 2rem;
+            background: transparent;
+        }
+
+        .projects-list {
+            background: transparent;
+        }
+
+        .projects-list a {
+            display: inline-block;
+            font-size: 1.3rem;
+            color: #8795D9;
+            text-decoration: none;
+            padding: 10px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .projects-list a:hover {
+            border-bottom-color: #8795D9;
+            transform: translateY(10px);
+        }
+
+        @keyframes cursor {
+            to {
+                border-left: 100px solid #8795D9;
+            }
+        }
+
+        @keyframes words {
+            0%, 20% {
+                content: "A Learner";
+            }
+            21%, 40% {
+                content: "A Programmer";
+            }
+            41%, 60% {
+                content: "An Intern";
+            }
+            61%, 80% {
+                content: "An Assistant Exco";
+            }
+            81%, 100% {
+                content: "A Good Story Teller";
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .home {
+                padding: 60px 40px;
+            }
+            
+            .home-content h1 {
+                font-size: 3.5rem;
+            }
+            
+            .hero-image {
+                flex: 0 0 300px;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .home {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+            }
+            
+            .home-content {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            
+            .home-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .home-content h3,
+            .typing-text {
+                font-size: 1.8rem;
+            }
+            
+            .hero-image {
+                flex: 0 0 250px;
+                height: 250px;
+            }
+            
+            .projects-section {
+                padding: 40px 20px;
+            }
+        }
