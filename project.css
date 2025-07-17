@@ -1,0 +1,237 @@
+/* Project Page Specific Styles - Override Foundation for Book */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+}
+
+.book-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Book Styles */
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+    background: transparent !important;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+    background: transparent !important;
+}
+
+.front,
+.back {
+    background-color: white !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid #2C3E50;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    padding: 20px;
+    color: #333;
+}
+
+.front-content h1,
+.back-content h1 {
+    background: transparent !important;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.front-content p,
+.back-content p {
+    background: transparent !important;
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.front-content a,
+.back-content a {
+    background: transparent !important;
+    color: #2C3E50;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 2px solid #2C3E50;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.front-content a:hover,
+.back-content a:hover {
+    background-color: #2C3E50 !important;
+    color: white;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons - Override foundation button styles */
+.book-container button {
+    border: none !important;
+    background-color: transparent !important;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.book-container button:focus {
+    outline: none;
+}
+
+.book-container button:hover {
+    background-color: transparent !important;
+}
+
+.book-container button:hover i {
+    color: #636363;
+}
+
+.book-container button i {
+    font-size: 50px;
+    color: gray;
+    background: transparent !important;
+}
+
+#prev-btn {
+    left: 25%;
+}
+
+#next-btn {
+    right: 25%;
+}
+
+/* Paper stack order - Original stacking */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+/* When papers are flipped, they should go behind the current visible paper */
+#p1.flipped {
+    z-index: 0;
+}
+
+#p2.flipped {
+    z-index: 0;
+}
+
+#p3.flipped {
+    z-index: 0;
+}
+
+/* Pointer events control - only the currently visible top paper should be interactive */
+.paper {
+    pointer-events: none;
+}
+
+.paper h1 {
+    color: #2C3E50;
+}
+
+/* Default state - only paper 1 is interactive */
+.book #p1:not(.flipped) {
+    pointer-events: auto;
+}
+
+/* When paper 1 is flipped, paper 2 becomes interactive */
+.book #p1.flipped ~ #p2:not(.flipped) {
+    pointer-events: auto;
+}
+
+/* When papers 1 and 2 are flipped, paper 3 becomes interactive */
+.book #p1.flipped ~ #p2.flipped ~ #p3:not(.flipped) {
+    pointer-events: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .book {
+        width: 280px;
+        height: 400px;
+    }
+
+    .book-container button i {
+        font-size: 35px;
+    }
+
+    #prev-btn {
+        left: 20%;
+    }
+
+    #next-btn {
+        right: 20%;
+    }
+
+    .front-content h1,
+    .back-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .front-content p,
+    .back-content p {
+        font-size: 0.9rem;
+    }
+}

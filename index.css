@@ -25,7 +25,7 @@
         }
 
         .home-content h1 span {
-            color: #8795D9;
+            color: #2C3E50;
             background: transparent;
         }
 
@@ -48,13 +48,13 @@
 
         .typing-text span {
             position: relative;
-            color: #8795D9;
+            color: #2C3E50;
             background: transparent;
         }
 
         .typing-text span::before {
             content: "A Good Story Teller";
-            color: #8795D9;
+            color: #2C3E50;
             animation: words 20s infinite;
         }
 
@@ -92,17 +92,17 @@
             width: 3.5rem;
             height: 3.5rem;
             background-color: transparent;
-            border: 0.2rem solid #8795D9;
+            border: 0.2rem solid #2C3E50;
             font-size: 1.5rem;
             border-radius: 50%;
             transition: 0.3s ease;
-            color: #8795D9;
+            color: #2C3E50;
         }
 
         .social-icons a:hover {
             color: bisque;
             transform: scale(1.1) translateY(-3px);
-            background-color: #8795D9;
+            background-color: #2C3E50;
             box-shadow: 0 0 20px rgba(135, 149, 217, 0.4);
         }
 
@@ -115,15 +115,15 @@
             font-size: 1.1rem;
             font-weight: 600;
             background-color: transparent;
-            border: 2px solid #8795D9;
-            color: #8795D9;
+            border: 2px solid #2C3E50;
+            color: #2C3E50;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .hire-btn button:hover {
-            background-color: #8795D9;
+            background-color: #2C3E50;
             color: white;
             transform: translateY(-2px);
         }
@@ -131,7 +131,7 @@
         .hero-image {
             flex: 0 0 400px;
             height: 400px;
-            background: linear-gradient(135deg, #8795D9, #87ADDE);
+            background: linear-gradient(135deg, #2C3E50, #696969);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -172,7 +172,7 @@
         .projects-list a {
             display: inline-block;
             font-size: 1.3rem;
-            color: #8795D9;
+            color: #2C3E50;
             text-decoration: none;
             padding: 10px 0;
             border-bottom: 2px solid transparent;
@@ -181,13 +181,13 @@
         }
 
         .projects-list a:hover {
-            border-bottom-color: #8795D9;
+            border-bottom-color: #2C3E50;
             transform: translateY(10px);
         }
 
         @keyframes cursor {
             to {
-                border-left: 100px solid #8795D9;
+                border-left: 100px solid #2C3E50;
             }
         }
 

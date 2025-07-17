@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type=“text/css” href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <title>Projects</title>
 </head>
 <body>
@@ -18,16 +21,76 @@
                 </li>
             </ul>
         </nav>
-        <a class="cta" href="mailto:ngosongjie@connect.ite.edu.sg">
+        <a class="cta" href="mailto:songjiengo@gmail.com">
             <button>
                 Contact
             </button>
         </a>
     </header>
 
-    <h1>Projects</h1>
-    <br>
-        <a href="https://ngosongjie.itch.io/child-of-gaia-20">Unity 2D Rougelike</a>
-        <p>Test</p>
+    <div class="book-container">
+        <!-- Previous Button -->
+        <button id="prev-btn">
+            <i class="fas fa-arrow-circle-left"></i>
+        </button>
+
+        <!-- Book -->
+        <div id="book" class="book">
+            <!-- Paper 1 -->
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <h1>Projects</h1>
+                        <p>Relevant projects committed.</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <h1>Project Details</h1>
+                        <p><strong>Skills</strong> Unity, C#, 2D Graphics<br><br>
+                        <strong>Features:</strong> Roguelike, Combat system, Character progression<br><br>
+                        <strong>Development Time:</strong> 2025<br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 2 -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <h1>Child Of Gaia</h1>
+                        <a href="https://ngosongjie.itch.io/child-of-gaia-20" target="_blank">Play Now</a>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <h1>Flask Notetaking</h1>
+                        <p><strong>Skills</strong> Python, HTML, JavaScript<br><br>
+                        <strong>Features:</strong> Email Login, Save mechanics<br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 3 -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <h1>Flask Notetaking</h1>
+                        <a href="./PythonFlaskProject.zip" target="_blank">Download</a>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <h1>To be Continue</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Next Button -->
+        <button id="next-btn">
+            <i class="fas fa-arrow-circle-right"></i>
+        </button>
+    </div>
 </body>
 </html>
